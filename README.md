@@ -19,7 +19,7 @@ A simple Community School Homepage built using **HTML5** and **CSS3** as part of
 
 ## Live Demo
 
-comming soon.
+ https://eldhoseabrahamemerson.github.io/community-school-homepage/
 
 ## Author
 
