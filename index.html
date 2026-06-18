@@ -1,74 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St Alphonsa Community School</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>St. Alphonsa Community School — Excellence in Education</title>
+  <meta name="description" content="St. Alphonsa Community School — A premier educational institution in Kottayam, Kerala, dedicated to nurturing future leaders through academic excellence and holistic development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
-
 <body>
-    <header>
-        <h1>St Alphonsa Community School</h1>
-        <p>Learning today, Leading tomorrow</p>
-    </header>
 
-    <main>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Teachers</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="St. Alphonsa Community School Home">
+        <div class="nav-logo-mark">
+          <span>SA</span>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">St. Alphonsa</span>
+          <span class="nav-logo-sub">Community School</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#academics" class="nav-link">Academics</a></li>
+        <li><a href="#faculty" class="nav-link">Faculty</a></li>
+        <li><a href="#news" class="nav-link">News</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#admissions" class="btn-nav-cta">Apply Now</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="#about" class="nav-mobile-link">About</a></li>
+        <li><a href="#academics" class="nav-mobile-link">Academics</a></li>
+        <li><a href="#faculty" class="nav-mobile-link">Faculty</a></li>
+        <li><a href="#news" class="nav-mobile-link">News</a></li>
+        <li><a href="#contact" class="nav-mobile-link">Contact</a></li>
+        <li><a href="#admissions" class="btn-nav-cta mobile-cta">Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <h2>Welcome to St Alphonsa Community School</h2>
-        <p>Empowering student minds, inspiring futures.</p>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home" aria-label="Welcome hero">
+    <div class="hero-bg">
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <i data-lucide="award" aria-hidden="true"></i>
+        <span>Est. 1998 · Kottayam, Kerala</span>
+      </div>
+      <h1 class="hero-headline reveal-up">
+        <span class="hero-headline-main">Where Brilliance</span>
+        <span class="hero-headline-accent">Finds Its Voice.</span>
+      </h1>
+      <p class="hero-subtext reveal-up">
+        St. Alphonsa Community School nurtures exceptional minds through academic rigour, character development, and the pursuit of a life well-lived. Learning today. Leading tomorrow.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#admissions" class="btn-primary">
+          <span>Begin Your Journey</span>
+          <i data-lucide="arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="#about" class="btn-ghost">
+          <span>Discover Our School</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-        <section>
-            <h2>Our Mission</h2>
-            <p>At St Alphonsa Community School, our mission is to provide a nurturing and inclusive learning environment
-                that
-                fosters academic excellence, personal growth, and social responsibility. We are committed to empowering our
-                students with the knowledge, skills, and values they need to succeed in a rapidly changing world.</p>
-        </section>
+  <!-- ===================== STATS ===================== -->
+  <section class="stats" aria-label="School statistics">
+    <div class="stats-container">
+      <div class="stat-item reveal-up">
+        <span class="stat-number" data-target="1400">0</span>
+        <span class="stat-plus">+</span>
+        <span class="stat-label">Students Enrolled</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item reveal-up">
+        <span class="stat-number" data-target="96">0</span>
+        <span class="stat-plus">%</span>
+        <span class="stat-label">Board Exam Pass Rate</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item reveal-up">
+        <span class="stat-number" data-target="85">0</span>
+        <span class="stat-plus">+</span>
+        <span class="stat-label">Expert Educators</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item reveal-up">
+        <span class="stat-number" data-target="26">0</span>
+        <span class="stat-plus">+</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+    </div>
+  </section>
 
-        <section>
-            <h2>Our Vision</h2>
-            <p>Our vision is to be a leading educational institution that inspires and prepares students to become
-                compassionate, innovative, and responsible global citizens. We strive to create a community where every
-                student
-                can thrive academically, socially, and emotionally, and where diversity is celebrated as a strength.</p>
-        </section>
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about" aria-label="About the school">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-eyebrow reveal-up">About Us</div>
+          <h2 class="section-title reveal-up">
+            A Legacy of <br /><em>Purposeful Education</em>
+          </h2>
+          <p class="section-body reveal-up">
+            Founded on the values of faith, integrity, and intellectual curiosity, St. Alphonsa Community School has shaped generations of thinkers, leaders, and compassionate human beings. Nestled in the heart of Kottayam, we blend time-honoured tradition with contemporary pedagogy.
+          </p>
+          <p class="section-body reveal-up">
+            Our campus is a living ecosystem of growth — where classrooms become laboratories of thought, and every student is seen as an individual with a unique genius waiting to be discovered.
+          </p>
+          <a href="#academics" class="btn-outline reveal-up">
+            <span>Explore Academics</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="about-right">
+          <div class="about-card-grid">
+            <div class="about-card reveal-up" style="--delay: 0s">
+              <div class="about-card-icon"><i data-lucide="book-open" aria-hidden="true"></i></div>
+              <h3>Academic Rigour</h3>
+              <p>CBSE-aligned curriculum with enriched learning materials and dedicated mentorship for every student.</p>
+            </div>
+            <div class="about-card reveal-up" style="--delay: 0.1s">
+              <div class="about-card-icon"><i data-lucide="heart" aria-hidden="true"></i></div>
+              <h3>Holistic Growth</h3>
+              <p>Equal emphasis on arts, sports, leadership, and emotional intelligence alongside academics.</p>
+            </div>
+            <div class="about-card reveal-up" style="--delay: 0.2s">
+              <div class="about-card-icon"><i data-lucide="globe" aria-hidden="true"></i></div>
+              <h3>Global Perspective</h3>
+              <p>International exposure through exchange programmes, competitions, and a globally-minded faculty.</p>
+            </div>
+            <div class="about-card reveal-up" style="--delay: 0.3s">
+              <div class="about-card-icon"><i data-lucide="shield" aria-hidden="true"></i></div>
+              <h3>Safe Environment</h3>
+              <p>A caring, inclusive campus culture where every child feels valued, protected, and inspired.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <section>
-        <h2>Latest News</h2>
-        <ul class="news-list">
-            <li>New Admissions are now open</li>
-            <li>Annual Sports Day on March 15th</li>
-            <li>Parent-Teacher Meeting scheduled for April 20th</li>
-            <li>Science Fair winners announced</li>
-        </ul>
-        </section>
+  <!-- ===================== MISSION + VISION ===================== -->
+  <section class="mission-vision" aria-label="Mission and Vision">
+    <div class="container">
+      <div class="mv-grid">
+        <div class="mv-card mv-mission reveal-up">
+          <div class="mv-icon"><i data-lucide="compass" aria-hidden="true"></i></div>
+          <div class="mv-tag">Our Mission</div>
+          <h2>Empowering Every Learner</h2>
+          <p>We provide a nurturing and inclusive learning environment that fosters academic excellence, personal growth, and social responsibility. Our commitment is to equip students with the knowledge, skills, and values to thrive in a dynamic, interconnected world — not merely as students, but as future citizens of consequence.</p>
+        </div>
+        <div class="mv-card mv-vision reveal-up">
+          <div class="mv-icon"><i data-lucide="telescope" aria-hidden="true"></i></div>
+          <div class="mv-tag">Our Vision</div>
+          <h2>Inspiring Global Citizens</h2>
+          <p>To be a leading educational institution that prepares students to become compassionate, innovative, and responsible global citizens. We envision a community where every student flourishes academically, socially, and emotionally — and where diversity is not merely accepted, but celebrated as our greatest collective strength.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <section>
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to learn more about our school, please feel free to contact us:</p>
-        <ul>
-            <li>Phone: 0481-2345678</li>
-            <li>Email: info@stalphonsa.edu</li>
-            <li>Address: 123 School Street, Kottayam, Kerala, 686000</li>
-        </ul>
-        </section>
+  <!-- ===================== ACADEMICS ===================== -->
+  <section class="academics" id="academics" aria-label="Academic programmes">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Academics</div>
+        <h2 class="section-title">Excellence Across <em>Every Discipline</em></h2>
+        <p class="section-subtitle">From foundational years to senior secondary, our programmes are designed to build depth, curiosity, and capability.</p>
+      </div>
+      <div class="academics-grid">
+        <div class="academic-track reveal-up" style="--delay: 0s">
+          <div class="track-number">01</div>
+          <div class="track-icon"><i data-lucide="calculator" aria-hidden="true"></i></div>
+          <h3>Science & Mathematics</h3>
+          <p>Advanced laboratory facilities, Olympiad preparation, and dedicated coaching in Physics, Chemistry, Biology, and Mathematics.</p>
+          <div class="track-tags">
+            <span>CBSE</span><span>Olympiad</span><span>Lab Work</span>
+          </div>
+        </div>
+        <div class="academic-track reveal-up" style="--delay: 0.1s">
+          <div class="track-number">02</div>
+          <div class="track-icon"><i data-lucide="landmark" aria-hidden="true"></i></div>
+          <h3>Humanities & Social Sciences</h3>
+          <p>Critical thinking, debate culture, Model UN participation, and deep exploration of history, economics, and political science.</p>
+          <div class="track-tags">
+            <span>Model UN</span><span>Debate</span><span>Research</span>
+          </div>
+        </div>
+        <div class="academic-track reveal-up" style="--delay: 0.2s">
+          <div class="track-number">03</div>
+          <div class="track-icon"><i data-lucide="palette" aria-hidden="true"></i></div>
+          <h3>Arts & Creative Expression</h3>
+          <p>Music, visual arts, theatre, and creative writing programmes that cultivate imagination and emotional intelligence.</p>
+          <div class="track-tags">
+            <span>Music</span><span>Theatre</span><span>Fine Arts</span>
+          </div>
+        </div>
+        <div class="academic-track reveal-up" style="--delay: 0.3s">
+          <div class="track-number">04</div>
+          <div class="track-icon"><i data-lucide="cpu" aria-hidden="true"></i></div>
+          <h3>Technology & Innovation</h3>
+          <p>State-of-the-art computer labs, coding curriculum, robotics club, and digital literacy for the 21st-century learner.</p>
+          <div class="track-tags">
+            <span>Coding</span><span>Robotics</span><span>AI Literacy</span>
+          </div>
+        </div>
+        <div class="academic-track reveal-up" style="--delay: 0.4s">
+          <div class="track-number">05</div>
+          <div class="track-icon"><i data-lucide="dumbbell" aria-hidden="true"></i></div>
+          <h3>Sports & Physical Education</h3>
+          <p>Coaching in cricket, football, athletics, swimming, and yoga — building teamwork, discipline, and physical wellness.</p>
+          <div class="track-tags">
+            <span>Cricket</span><span>Athletics</span><span>Yoga</span>
+          </div>
+        </div>
+        <div class="academic-track reveal-up" style="--delay: 0.5s">
+          <div class="track-number">06</div>
+          <div class="track-icon"><i data-lucide="users" aria-hidden="true"></i></div>
+          <h3>Leadership & Community</h3>
+          <p>Student council, community service programmes, and leadership workshops that build character and social consciousness.</p>
+          <div class="track-tags">
+            <span>Student Council</span><span>Service</span><span>Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </main>
+  <!-- ===================== FACULTY ===================== -->
+  <section class="faculty" id="faculty" aria-label="Our faculty">
+    <div class="container">
+      <div class="faculty-inner">
+        <div class="faculty-left">
+          <div class="section-eyebrow reveal-up">Faculty Excellence</div>
+          <h2 class="section-title reveal-up">Guided by <br /><em>Exceptional Minds</em></h2>
+          <p class="section-body reveal-up">Our faculty are more than educators — they are mentors, researchers, and lifelong learners who bring passion and expertise into every classroom. With advanced degrees from India's premier institutions, our teachers are committed to unlocking the full potential of each student.</p>
+          <div class="faculty-highlights reveal-up">
+            <div class="fh-item">
+              <i data-lucide="graduation-cap" aria-hidden="true"></i>
+              <span>72% hold postgraduate qualifications</span>
+            </div>
+            <div class="fh-item">
+              <i data-lucide="star" aria-hidden="true"></i>
+              <span>Average 14 years of teaching experience</span>
+            </div>
+            <div class="fh-item">
+              <i data-lucide="refresh-cw" aria-hidden="true"></i>
+              <span>Annual professional development programmes</span>
+            </div>
+          </div>
+        </div>
+        <div class="faculty-right reveal-up">
+          <div class="faculty-profiles">
+            <div class="faculty-card">
+              <div class="faculty-avatar" style="--bg: #1a2744">
+                <span>PK</span>
+              </div>
+              <div class="faculty-info">
+                <h4>Prof. Priya Krishnan</h4>
+                <span>Head of Sciences · M.Sc Physics, IIT Madras</span>
+              </div>
+            </div>
+            <div class="faculty-card">
+              <div class="faculty-avatar" style="--bg: #1e3320">
+                <span>MS</span>
+              </div>
+              <div class="faculty-info">
+                <h4>Mr. Mathew Samuel</h4>
+                <span>Head of Mathematics · M.Sc, Mahatma Gandhi University</span>
+              </div>
+            </div>
+            <div class="faculty-card">
+              <div class="faculty-avatar" style="--bg: #2c1a1a">
+                <span>AJ</span>
+              </div>
+              <div class="faculty-info">
+                <h4>Ms. Anitha Jacob</h4>
+                <span>Head of Languages · M.A. English, University of Kerala</span>
+              </div>
+            </div>
+            <div class="faculty-card">
+              <div class="faculty-avatar" style="--bg: #1a1a2c">
+                <span>RN</span>
+              </div>
+              <div class="faculty-info">
+                <h4>Dr. Reena Nair</h4>
+                <span>Principal · Ph.D. Education, CUSAT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2026 St Alphonsa Community School. All rights reserved.</p>
-    </footer>
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" aria-label="Student and parent testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Voices</div>
+        <h2 class="section-title">Stories That <em>Inspire Us</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal-up" style="--delay: 0s">
+          <div class="testimonial-quote">"</div>
+          <p>St. Alphonsa didn't just prepare me for exams — it prepared me for life. The teachers here genuinely care about who you are becoming, not just what you are scoring.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><span>AM</span></div>
+            <div>
+              <strong>Arjun Menon</strong>
+              <span>Class XII Alumnus · NIT Calicut</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" style="--delay: 0.15s">
+          <div class="testimonial-quote">"</div>
+          <p>As a parent, the warmth and dedication of this school community gave me absolute confidence. My daughter blossomed here, academically and as a person of strong values.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><span>SG</span></div>
+            <div>
+              <strong>Sreeja George</strong>
+              <span>Parent · Kottayam</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-up" style="--delay: 0.3s">
+          <div class="testimonial-quote">"</div>
+          <p>The science programme here is exceptional. The labs, the mentorship, the culture of questioning — it sparked my love for research that carried me all the way to my PhD.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><span>RJ</span></div>
+            <div>
+              <strong>Riya Jose</strong>
+              <span>Class X Alumna · Research Scholar, IISc</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWS ===================== -->
+  <section class="news" id="news" aria-label="Latest news">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Latest News</div>
+        <h2 class="section-title">Life at <em>St. Alphonsa</em></h2>
+      </div>
+      <div class="news-grid">
+        <article class="news-card news-card-featured reveal-up">
+          <div class="news-card-image" aria-hidden="true">
+            <div class="news-img-placeholder featured-img"></div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span class="news-tag">Admissions</span>
+              <span class="news-date">June 2026</span>
+            </div>
+            <h3>Admissions Open for Academic Year 2026–27</h3>
+            <p>Applications are now being accepted for Classes I through XII. Early applicants are encouraged to secure their seats for a transformative educational journey.</p>
+            <a href="#admissions" class="news-read-more">
+              <span>Apply Now</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+        <article class="news-card reveal-up" style="--delay: 0.1s">
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span class="news-tag">Events</span>
+              <span class="news-date">March 2026</span>
+            </div>
+            <h3>Annual Sports Day — Champions Rising</h3>
+            <p>Our 28th Annual Sports Day was a celebration of spirit and athleticism, with students from all grades competing across 14 disciplines.</p>
+          </div>
+        </article>
+        <article class="news-card reveal-up" style="--delay: 0.2s">
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span class="news-tag">Community</span>
+              <span class="news-date">April 2026</span>
+            </div>
+            <h3>Parent-Teacher Partnership Forum 2026</h3>
+            <p>This year's PTM brought together over 600 families for meaningful conversations about student progress and the school's evolving vision.</p>
+          </div>
+        </article>
+        <article class="news-card reveal-up" style="--delay: 0.3s">
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span class="news-tag">Achievement</span>
+              <span class="news-date">February 2026</span>
+            </div>
+            <h3>Science Fair — District Gold for Third Consecutive Year</h3>
+            <p>Our students secured first place at the District Science Fair, with a groundbreaking project on sustainable agricultural irrigation systems.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS ===================== -->
+  <section class="achievements" aria-label="School achievements timeline">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Milestones</div>
+        <h2 class="section-title">A History of <em>Achievement</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-up" style="--delay: 0s">
+          <div class="timeline-year">1998</div>
+          <div class="timeline-content">
+            <h4>Founded with Purpose</h4>
+            <p>St. Alphonsa Community School opens its doors with 120 students and a vision to serve the educational needs of Kottayam.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" style="--delay: 0.1s">
+          <div class="timeline-year">2005</div>
+          <div class="timeline-content">
+            <h4>CBSE Affiliation</h4>
+            <p>Awarded full affiliation by the Central Board of Secondary Education, expanding academic offerings to Classes XI and XII.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" style="--delay: 0.2s">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-content">
+            <h4>State Excellence Award</h4>
+            <p>Recognised by the Government of Kerala as one of the top 10 community schools in the state for academic and cultural achievement.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" style="--delay: 0.3s">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-content">
+            <h4>Digital Campus Initiative</h4>
+            <p>Launched a comprehensive technology integration programme, equipping all classrooms with smart learning infrastructure.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" style="--delay: 0.4s">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h4>1,400 Students & Growing</h4>
+            <p>Crossed a landmark enrolment milestone, cementing our place as one of Kottayam's most trusted educational institutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ADMISSIONS CTA ===================== -->
+  <section class="admissions" id="admissions" aria-label="Admissions call to action">
+    <div class="admissions-bg" aria-hidden="true">
+      <div class="adm-orb adm-orb-1"></div>
+      <div class="adm-orb adm-orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="admissions-inner reveal-up">
+        <div class="section-eyebrow light">Admissions 2026–27</div>
+        <h2 class="admissions-title">Your Child's Finest Chapter <em>Begins Here.</em></h2>
+        <p class="admissions-body">Join a school where every student is known by name, not just by number. We are now accepting applications for Classes I through XII.</p>
+        <div class="admissions-steps">
+          <div class="adm-step">
+            <div class="adm-step-num">1</div>
+            <span>Submit Enquiry</span>
+          </div>
+          <div class="adm-step-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></div>
+          <div class="adm-step">
+            <div class="adm-step-num">2</div>
+            <span>Campus Visit</span>
+          </div>
+          <div class="adm-step-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></div>
+          <div class="adm-step">
+            <div class="adm-step-num">3</div>
+            <span>Entrance Assessment</span>
+          </div>
+          <div class="adm-step-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></div>
+          <div class="adm-step">
+            <div class="adm-step-num">4</div>
+            <span>Enrolment</span>
+          </div>
+        </div>
+        <div class="admissions-actions">
+          <a href="#contact" class="btn-primary-dark">
+            <span>Start Your Application</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="tel:04812345678" class="btn-ghost-dark">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <span>Call Us: 0481-2345678</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact" aria-label="Contact information">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Get in Touch</div>
+        <h2 class="section-title">We'd Love to <em>Hear From You</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="map-pin" aria-hidden="true"></i></div>
+            <div>
+              <h4>Visit Us</h4>
+              <p>123 School Street, Kottayam<br />Kerala — 686 001</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="phone" aria-hidden="true"></i></div>
+            <div>
+              <h4>Call Us</h4>
+              <p><a href="tel:04812345678">0481-2345678</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="mail" aria-hidden="true"></i></div>
+            <div>
+              <h4>Write to Us</h4>
+              <p><a href="mailto:info@stalphonsa.edu">info@stalphonsa.edu</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="clock" aria-hidden="true"></i></div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday – Saturday<br />8:00 AM – 4:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal-up" aria-label="Send a message">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your contact number" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn-form-submit">
+            <span>Send Message</span>
+            <i data-lucide="send" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">
+              <span>SA</span>
+            </div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">St. Alphonsa</span>
+              <span class="nav-logo-sub">Community School</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Learning today. Leading tomorrow.<br />Kottayam, Kerala — Est. 1998.</p>
+        </div>
+        <div class="footer-links-group">
+          <h5>School</h5>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#news">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h5>Admissions</h5>
+          <ul>
+            <li><a href="#admissions">Apply Now</a></li>
+            <li><a href="#admissions">Eligibility</a></li>
+            <li><a href="#admissions">Fee Structure</a></li>
+            <li><a href="#admissions">Scholarships</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:04812345678">0481-2345678</a></li>
+            <li><a href="mailto:info@stalphonsa.edu">info@stalphonsa.edu</a></li>
+            <li><a href="#contact">Get Directions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 St. Alphonsa Community School. All rights reserved.</p>
+        <p class="footer-credits">Designed with care for the students of tomorrow.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Lucide icons
+    lucide.createIcons();
+
+    // ── GSAP + ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // ── Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile menu
+          document.getElementById('mobileMenu').classList.remove('open');
+          document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // ── Navbar scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ── Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('active', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // ── Reveal animations (ScrollTrigger)
+    const revealEls = document.querySelectorAll('.reveal-up');
+    revealEls.forEach((el) => {
+      const delay = parseFloat(getComputedStyle(el).getPropertyValue('--delay')) || 0;
+      gsap.fromTo(el,
+        { opacity: 0, y: 48 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            toggleActions: 'play none none none',
+          }
+        }
+      );
+    });
+
+    // ── Hero parallax orbs
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      gsap.to('.orb-1', { x: x * 1.2, y: y * 1.2, duration: 1.2, ease: 'power2.out' });
+      gsap.to('.orb-2', { x: -x * 0.8, y: -y * 0.8, duration: 1.4, ease: 'power2.out' });
+      gsap.to('.orb-3', { x: x * 0.5, y: y * 0.5, duration: 1.6, ease: 'power2.out' });
+    }, { passive: true });
+
+    // ── Animated counters
+    document.querySelectorAll('.stat-number').forEach((el) => {
+      const target = parseInt(el.dataset.target, 10);
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 85%',
+        onEnter: () => {
+          gsap.to({ val: 0 }, {
+            val: target,
+            duration: 1.8,
+            ease: 'power2.out',
+            onUpdate: function () {
+              el.textContent = Math.round(this.targets()[0].val).toLocaleString();
+            }
+          });
+        },
+        once: true
+      });
+    });
+
+    // ── Card hover tilt
+    document.querySelectorAll('.about-card, .academic-track, .news-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        gsap.to(card, {
+          rotateY: x * 6,
+          rotateX: -y * 6,
+          transformPerspective: 800,
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
+      });
+    });
+
+    // ── Form submit
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('.btn-form-submit span');
+        btn.textContent = 'Message Sent ✓';
+        form.reset();
+        setTimeout(() => { btn.textContent = 'Send Message'; }, 3000);
+      });
+    }
+
+    // ── Hero entrance animation
+    gsap.timeline({ delay: 0.2 })
+      .fromTo('.hero-badge', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
+      .fromTo('.hero-headline-main', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.3')
+      .fromTo('.hero-headline-accent', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+      .fromTo('.hero-subtext', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+      .fromTo('.hero-actions', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
+      .fromTo('.hero-scroll-indicator', { opacity: 0 }, { opacity: 1, duration: 0.6 }, '-=0.2');
+  </script>
 </body>
-
 </html>
